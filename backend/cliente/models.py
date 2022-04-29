@@ -1,3 +1,7 @@
 from django.db import models
 
-# Create your models here.
+'''
+class Cliente(models.Model):
+    nome = models.CharField(_(""), max_length=150)
+    fone = models.CharField(_(""), max_length=13)
+'''
