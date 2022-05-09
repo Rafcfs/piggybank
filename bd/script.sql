@@ -105,10 +105,49 @@ create table movimentacao(
     constraint fk_operacao foreign key (idOperacao) references operacao(id)
 );
 
+create table emprestimo(
+	id int primary key auto_increment,
+    valor decimal(10,2),
+    numeroConta bigint,
+    idAgencia int,
+    constraint fk_conta_emprestimo foreign key (numeroConta) references conta(numero),
+    constraint fk_agencia_emprestimo foreign key (idAgencia) references agencia(id)
+);
+
+
 insert into cliente_fisica(cpf,sexo,dt_nascimento) values ('45539036875','M','2002-09-24');
 insert into cliente_juridica(cnpj,insc_estadual) values (50033564000107,50033564000107);
 insert into cliente(nome,fone,cep,localidade,uf,logradouro,tipo_logradouro,bairro,numero,cpf) values ('Rafael Carrasqueira','16991694976','15906286','Taquaritinga','SP','Reynaldo Pincetta','rua','Santa Cruz',216,45539036875);
 select * from cliente inner join cliente_fisica on cliente.cpf = cliente_fisica.cpf;
 select * from cliente_fisica;
 select * from cliente_juridica;
+
+
+insert into agencia(nome,telefone,numero) values ('virtual',08008888888,2577);
+select * from agencia;
+
+insert into conta(numero, saldo, tipo, idCliente, idAgencia) values (301914,389.12,'C',1,1);
+select * from conta;
+
+insert into funcionario(nome,salario,comissao,idAgencia) values ('João da Silva',1200.00,13.50,1);
+select * from funcionario;
+
+insert into Atendimento(horario,servico,idCliente,idFuncionario) values (now(),'liberar cartao',1,2);
+select * from Atendimento;
+
+insert into emprestimo(valor,numeroConta,idAgencia) values (100.00,301914,1);
+select * from emprestimo;
+
+insert into cartao_credito(numero,validade,cvv,operadora,saldo,limite,numeroConta) values (4854641218633014,0228,156,'mastercard',100.00,800.00,301914);
+select * from cartao_credito;
+
+insert into fatura(valor,vencimento,juros_cobrar,status_pagamento,numeroCartao) values (500.00,2002-06-01,0,'a',4854641218633014);
+update fatura set vencimento = '2002-08-01' where id=1;
+select * from fatura;
+
+insert into Operacao(nome,descricao) values ('pix','rafacarrasqueira@gmail.com');
+select * from Operacao;
+
+insert into movimentacao(valor,data_movimentacao,tipo,numeroConta,idOperacao) values (100.00,now(),'p',301914,1);
+select * from movimentacao;
 
