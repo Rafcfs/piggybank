@@ -32,7 +32,7 @@ class Cliente(models.Model):
         ('SE', 'Sergipe'),
         ('TO', 'Tocantins')
     )
-    
+
     nome = models.CharField(max_length=255)
     sobrenome = models.CharField(max_length=255)
     fone = models.CharField(max_length=255)
@@ -54,7 +54,7 @@ class Pessoa_Fisica(Cliente):
         ('N', 'Não Binário')
     )
     sexo = models.CharField(max_length=1, choices=SEXOS)
-    nascimento = models.DateTimeField(auto_now=False, auto_now_add=False)
+    nascimento = models.DateField()
     ESTADOS_CIVIS = (
         ('S', 'Solteiro'),
         ('C', 'Casado'),
@@ -63,8 +63,14 @@ class Pessoa_Fisica(Cliente):
     )
     estado_civil = models.CharField(max_length=1, choices=ESTADOS_CIVIS)
 
+    def __str__(self):
+        return self.nome
+
 
 class Pessoa_Juridica(Cliente):
     cnpj = models.CharField(max_length=50)
     inscricao_estadual = models.CharField(max_length=50)
     nome_responsavel = models.CharField(max_length=255)
+
+    def __str__(self):
+        return self.nome
