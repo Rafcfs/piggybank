@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'cliente.apps.ClienteConfig',
+    'agencia.apps.AgenciaConfig',
 
     # TODO remover debug tooldbar
     "debug_toolbar",
