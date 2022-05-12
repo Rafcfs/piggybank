@@ -42,6 +42,9 @@ INSTALLED_APPS = [
     'cliente.apps.ClienteConfig',
     'agencia.apps.AgenciaConfig',
     'conta.apps.ContaConfig',
+    'emprestimo.apps.EmprestimoConfig',
+    'funcionario.apps.FuncionarioConfig',
+    'atendimento.apps.AtendimentoConfig',
 
     # TODO remover debug tooldbar
     "debug_toolbar",

@@ -21,5 +21,9 @@ urlpatterns = [
     path('cliente/', include('cliente.urls')),
     path('agencia/', include('agencia.urls')),
     path('conta/', include('conta.urls')),
+    path('emprestimo/', include('emprestimo.urls')),
+    path('atendimento/', include('atendimento.urls')),
+
+
     path('__debug__/', include('debug_toolbar.urls'))
 ]
