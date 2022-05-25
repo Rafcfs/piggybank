@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'emprestimo.apps.EmprestimoConfig',
     'funcionario.apps.FuncionarioConfig',
     'atendimento.apps.AtendimentoConfig',
+    'movimentacao.apps.MovimentacaoConfig',
 
     # TODO remover debug tooldbar
     "debug_toolbar",
