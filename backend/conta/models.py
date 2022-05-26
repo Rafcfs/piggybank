@@ -15,3 +15,6 @@ class Conta(models.Model):
     tipo = models.CharField(max_length=2, choices=tipo_conta)
     idagencia = models.ForeignKey(Agencia, on_delete=models.PROTECT)
     idcliente = models.ForeignKey(Cliente, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.numero

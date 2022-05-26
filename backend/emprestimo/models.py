@@ -8,3 +8,6 @@ class Emprestimo(models.Model):
     data_aplicacao = models.DateField()
     idagencia = models.ForeignKey(Agencia, on_delete=models.PROTECT)
     idconta = models.ForeignKey(Conta, on_delete=models.PROTECT)
+
+    def __str__(self):
+        return self.idconta
