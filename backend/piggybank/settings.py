@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'funcionario.apps.FuncionarioConfig',
     'atendimento.apps.AtendimentoConfig',
     'movimentacao.apps.MovimentacaoConfig',
+    'cartao.apps.CartaoConfig',
 
     # TODO remover debug tooldbar
     "debug_toolbar",

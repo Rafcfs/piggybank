@@ -13,17 +13,15 @@ class Operacao(models.Model):
         ('TD', 'Transferência DOC'),
         ('PB', 'Pagamento de Boleto')
     )
-    
-
     nome = models.CharField(max_length=2, choices=tipos)
 
     def __str__(self) -> str:
-         return self.nome
+        return self.nome
 
 
 class Movimentacao(models.Model):
     conta_origem = models.ForeignKey(Conta, on_delete=models.CASCADE,
-     related_name='conta_envia', default=0)
+                                     related_name='conta_envia', default=0)
     tipo = models.ForeignKey(Operacao, on_delete=models.CASCADE)
     conta_receber = models.ForeignKey(Conta,
                                       on_delete=models.DO_NOTHING, blank=True, related_name='conta_recebe')
@@ -33,4 +31,7 @@ class Movimentacao(models.Model):
     codigo_boleto = models.CharField(max_length=999, blank=True)
 
     class Meta:
-        unique_together = ('conta_origem','conta_receber')
+        unique_together = ('conta_origem', 'conta_receber')
+
+    def __str__(self):
+        return self.conta_receber

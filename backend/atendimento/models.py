@@ -17,7 +17,6 @@ class Atendimento(models.Model):
     hora = models.TimeField()
     servico = models.CharField(max_length=2, choices=tipo_servico)
     descricao = models.CharField(max_length=255)
-    tipo = models.CharField(max_length=2, choices=tipo_servico)
     idfuncionario = models.ForeignKey(Funcionario, on_delete=models.PROTECT)
     idcliente = models.ForeignKey(Cliente, on_delete=models.CASCADE)
 
