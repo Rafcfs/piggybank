@@ -47,7 +47,9 @@ class Cliente(models.Model):
 
 
 class Pessoa_Fisica(Cliente):
+    RG = models.CharField(max_length=9, default=000000000)
     cpf = models.CharField(max_length=50)
+    
     SEXOS = (
         ('M', 'Masculino'),
         ('F', 'Feminino'),
