@@ -8,3 +8,7 @@ class Agencia(models.Model):
 
     def __str__(self):
         return self.nome
+
+    class Meta:
+        verbose_name = 'Agência'
+        verbose_name_plural = 'Agências'

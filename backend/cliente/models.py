@@ -47,7 +47,9 @@ class Cliente(models.Model):
 
 
 class Pessoa_Fisica(Cliente):
+    RG = models.CharField(max_length=9, default=000000000)
     cpf = models.CharField(max_length=50)
+    
     SEXOS = (
         ('M', 'Masculino'),
         ('F', 'Feminino'),
@@ -65,6 +67,10 @@ class Pessoa_Fisica(Cliente):
 
     def __str__(self):
         return self.nome
+
+    class Meta:
+        verbose_name = 'Pessoa Física'
+        verbose_name_plural = 'Pessoas Físicas'
 
 
 class Pessoa_Juridica(Cliente):
