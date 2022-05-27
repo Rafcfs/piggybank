@@ -66,6 +66,10 @@ class Pessoa_Fisica(Cliente):
     def __str__(self):
         return self.nome
 
+    class Meta:
+        verbose_name = 'Pessoa Física'
+        verbose_name_plural = 'Pessoas Físicas'
+
 
 class Pessoa_Juridica(Cliente):
     cnpj = models.CharField(max_length=50)

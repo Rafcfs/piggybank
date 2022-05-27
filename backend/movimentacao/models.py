@@ -18,6 +18,9 @@ class Operacao(models.Model):
     def __str__(self) -> str:
         return self.nome
 
+    class Meta:
+        verbose_name_plural = 'Operações'
+
 
 class Movimentacao(models.Model):
     conta_origem = models.ForeignKey(Conta, on_delete=models.CASCADE,
@@ -32,6 +35,7 @@ class Movimentacao(models.Model):
 
     class Meta:
         unique_together = ('conta_origem', 'conta_receber')
+        verbose_name_plural = 'Movimentações'
 
     def __str__(self):
         return self.conta_receber

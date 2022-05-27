@@ -22,6 +22,10 @@ class CartaoCredito(models.Model):
     def __str__(self):
         return self.numero
 
+    class Meta:
+        verbose_name = 'Cartão de Crédito'
+        verbose_name_plural = 'Cartões de Crédito'
+
 
 class Fatura(models.Model):
     opcoes = {
