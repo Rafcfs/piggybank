@@ -1,13 +1,14 @@
 import React from "react";
-import Login from "./screens/Login";
-import Menu from "./screens/Menu";
-import RegisterLegalClient from "./screens/RegisterLegalClient";
-import RegisterPhysicalCustomer from "./screens/RegisterPhysicalCustomer";
-import Support from "./screens/Support";
+import { BrowserRouter } from "react-router-dom";
+import { AppRoutes } from "./routes";
+import GlobalStyles from './styles/global'
 
 const App: React.FC = () => {
   return (
-    <Support/>
+    <BrowserRouter>
+      <AppRoutes />
+      <GlobalStyles />
+    </BrowserRouter>
   );
 }
 
