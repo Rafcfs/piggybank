@@ -9,7 +9,7 @@ export default createGlobalStyle`
 
  body{
      background: #f5f5f5;
-     font-size: 14px;
+     font-size: 20px;
      color: #333;
      font-family: sans-serif;
  }

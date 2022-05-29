@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Footer } from "../../components/Footer";
 import { Header } from "../../components/Header";
@@ -6,6 +6,8 @@ import { NavBar } from "../../components/NavBar";
 import { ButtonMoviment, ButtonMovimentDest, Container, Division, DivMargin, DivRadioButton, InputMoviment, TitleMoviment, ViewDestinatario, ViewOrigem } from "./styles";
 
 export function Moviment() {
+    const [date, setDate] = useState(new Date())
+
     return (
         <Container>
             <Header />
@@ -28,11 +30,11 @@ export function Moviment() {
                             <input type="radio" value="Pagamento de Contas" name="movimentacao"></input><p>Pagamento de Contas</p>
                         </div>
                     </DivRadioButton>
-                    <DivMargin>
-                        <label>Insira o chave do destinatário: </label>
-                        <InputMoviment type={"text"} />
-                        <ButtonMoviment>Veficar</ButtonMoviment>
-                    </DivMargin>
+                        <DivMargin>
+                            <label>Insira o chave do destinatário: </label>
+                            <InputMoviment type={"text"} />
+                            <ButtonMoviment>Veficar</ButtonMoviment>
+                        </DivMargin>
                     <DivRadioButton>
                         <div>
                             <label>Valor: </label>
@@ -40,7 +42,7 @@ export function Moviment() {
                         </div>
                         <div>
                             <label>Data: </label>
-                            <InputMoviment type={"date"} />
+                            <InputMoviment type={"date"} disabled />
                         </div>
                     </DivRadioButton>
                     <DivMargin>
