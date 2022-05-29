@@ -1,7 +1,6 @@
 
 from cgitb import enable
 
-from sqlalchemy import false, true
 from django.db import models
 from conta.models import Conta
 
