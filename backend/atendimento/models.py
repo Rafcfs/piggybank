@@ -8,7 +8,7 @@ class Atendimento(models.Model):
     tipo_servico = (
         ('AS', 'Ajuda com Suporte'),
         ('AP', 'Ajuda com Pagamentos'),
-        ('AS', 'Ajuda com Senha'),
+        ('A', 'Ajuda com Senha'),
         ('AC', 'Ajuda com Cartão'),
         ('AR', 'Ajuda com Reembolsos'),
     )
