@@ -33,21 +33,23 @@ export const DivSaldo = styled.div`
 
 export const LineButton = styled.div`
         display: flex;
+        justify-content: space-between;
+        width:1000px;
  `
 
 export const BoxMenu = styled.div`
     background-color: #73A580;
-    height: 250px;
+    height: 450px;
     display: grid;
     justify-content: center;
     align-items: center;
-    width: 600px;
+    width: 1200px;
     box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 `
 
 export const ButtonMovement = styled.button`
-    width: 100px;
-    height: 50px;
+    width: 180px;
+    height: 180px;
     margin: 10px;
     background: #fff;
     border: 1px solid #666;
