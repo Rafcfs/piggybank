@@ -1,5 +1,6 @@
 import { Navigate, Route, Routes } from "react-router-dom"
 import { ButtonSelectRegister } from "./screens/ButtonSelectRegister"
+import { LoanPage } from "./screens/LoanPage"
 import Login from "./screens/Login"
 import { MainPage } from "./screens/MainPage"
 import Menu from "./screens/Menu"
@@ -17,6 +18,7 @@ export const AppRoutes = () => {
             <Route path="/index" element={<MainPage />} />
             <Route path="/menu" element={<Menu />} />
             <Route path="/login" element={<Login />} />
+            <Route path="/emprestimo" element={<LoanPage />} />
             <Route path="/perfil" element={<Profile />} />
             <Route path="/cards" element={<MyCards />} />
             <Route path="/movimentacao" element={<Moviment />} />

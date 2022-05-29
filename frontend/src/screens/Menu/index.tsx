@@ -30,9 +30,11 @@ const Menu: React.FC = () => {
                         </ButtonMovement>
                     </LineButton>
                     <LineButton>
-                        <ButtonMovement>
+                       <Link to="/emprestimo"> 
+                       <ButtonMovement>
                             Empréstimo
                         </ButtonMovement>
+                        </Link>
                         <Link to="/cards">
                             <ButtonMovement>
                                 meus Cartões

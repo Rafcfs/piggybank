@@ -15,8 +15,21 @@ export const PrimaryLabel = styled.label`
 `
 
 export const PrimaryButton = styled.button`
-    background-color: #30B0C2;
-    width: 300px;
+    background-color: #4DC67D;
+    width: 200px;
     height: 40px;
     border-radius: 10px;
+
+    &:hover{
+    color: #fff;
+    background-color: #1e8449;
+    opacity: 1;
+    transform: translateY(0);
+    transition-duration: .35s;
+    }
+
+    &:active{
+    transform: translateY(2px);
+    transition-duration: .35s;
+    }
 `

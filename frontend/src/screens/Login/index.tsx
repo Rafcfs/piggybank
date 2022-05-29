@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Header } from "../../components/Header";
 import { PrimaryButton, PrimaryImput, PrimaryLabel } from "../../styles/primary";
-import { AlignForm, Container, FormLogin } from "./styles";
+import { AlignForm, Container, DivButton, FormLogin } from "./styles";
 
 const Login: React.FC = () => {
     return (
@@ -11,15 +11,20 @@ const Login: React.FC = () => {
             <AlignForm>
                 <FormLogin>
                     <div>
-                        <PrimaryLabel>Login:</PrimaryLabel>
-                        <PrimaryImput type={"email"} />
+                        <label>
+                            Email:
+                            <PrimaryImput type={"text"} />
+                        </label>
                     </div>
                     <div>
-                        <PrimaryLabel>Senha:</PrimaryLabel>
-                        <PrimaryImput type={"password"} />
+                        <label>
+                            Senha:
+                            <PrimaryImput type={"password"} />
+                        </label>
                     </div>
-                    <PrimaryButton><Link to="/menu">Entrar</Link></PrimaryButton>
-                    <PrimaryButton><Link to="/SelectRegister">Criar Conta</Link></PrimaryButton>
+                    <DivButton>
+                        <Link to="/menu"><PrimaryButton>Entrar</PrimaryButton></Link>
+                    </DivButton>
                 </FormLogin>
             </AlignForm>
         </Container>
