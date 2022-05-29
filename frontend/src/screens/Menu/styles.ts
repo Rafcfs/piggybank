@@ -14,7 +14,9 @@ export const JustifyCenter = styled.div`
 export const DivSaldo = styled.div`
     display: flex;
     align-items: center;
-    margin-left: 30px;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-bottom: 1px solid black;
 
     h4{
         color: red;
@@ -29,11 +31,18 @@ export const DivSaldo = styled.div`
     }
 `
 
+export const LineButton = styled.div`
+        display: flex;
+ `
+
 export const BoxMenu = styled.div`
     background-color: #73A580;
-    height: 200px;
-    width: 50%;
-    
+    height: 250px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    width: 600px;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 `
 
 export const ButtonMovement = styled.button`
