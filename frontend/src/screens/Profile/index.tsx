@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Header } from "../../components/Header";
 import { NavBar } from "../../components/NavBar";
 import { ViewOne } from "./stlyes";
+import api from "../../services/api";
 
 export function Profile() {
     return (
