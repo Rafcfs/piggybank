@@ -6,6 +6,7 @@ from .models import Usuario
 class AccountView(generics.CreateAPIView):
     queryset = Usuario.objects.all()
     serializer_class = AccountSerializer
+    
 
 '''
 
