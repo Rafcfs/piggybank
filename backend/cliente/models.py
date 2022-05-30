@@ -1,4 +1,3 @@
-import requests
 from django.db import models
 
 
@@ -36,7 +35,6 @@ class Cliente(models.Model):
     nome = models.CharField(max_length=255)
     sobrenome = models.CharField(max_length=255)
     fone = models.CharField(max_length=255)
-    email = models.CharField(max_length=255)
     cep = models.CharField(max_length=150)
     localidade = models.CharField(max_length=255)
     uf = models.CharField(max_length=2, choices=estados)

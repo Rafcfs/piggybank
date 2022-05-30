@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'movimentacao.apps.MovimentacaoConfig',
     'cartao.apps.CartaoConfig',
     'accounts.apps.AccountsConfig',
+    'rest_framework',
 
     # TODO remover debug tooldbar
     "debug_toolbar",

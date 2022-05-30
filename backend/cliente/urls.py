@@ -1,6 +1,6 @@
 from django.urls import path
-from . import views
+from .views import FisicaView
 
 urlpatterns = [
-    path('', views.index, name='index'),
+    path('', FisicaView.as_view()),
 ]

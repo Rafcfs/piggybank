@@ -1,6 +1,6 @@
 from django.urls import path
-from . import views
+from .views import CartaoView
 
 urlpatterns = [
-    path('', views.index, name='index'),
+    path('', CartaoView.as_view()),
 ]

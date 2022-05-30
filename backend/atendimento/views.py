@@ -1,5 +1,8 @@
 from django.shortcuts import render
+from rest_framework import generics
+from .serializers import AtendimentoSerializer
+from .models import Atendimento
 
-
-def index(request):
-    return render(request, 'atendimento/index.html')
+class AtendimentoView(generics.CreateAPIView):
+    queryset = Atendimento.objects.all()
+    serializer_class = AtendimentoSerializer

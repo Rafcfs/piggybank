@@ -1,6 +1,8 @@
+from enum import unique
+from xmlrpc.client import MININT
 from django.db import models
-
 from conta.models import Conta
+import random
 
 
 class CartaoCredito(models.Model):
@@ -11,7 +13,7 @@ class CartaoCredito(models.Model):
         ('HC', 'HiperCard')
     }
 
-    numero = models.CharField(max_length=16, unique=True)
+    numero=models.BigAutoField(auto_created=True,unique=True,primary_key=True)
     validade = models.DateField()
     cvv = models.CharField(max_length=3)
     bandeira = models.CharField(max_length=2, choices=operadoras)
@@ -25,6 +27,7 @@ class CartaoCredito(models.Model):
     class Meta:
         verbose_name = 'Cartão de Crédito'
         verbose_name_plural = 'Cartões de Crédito'
+
 
 
 class Fatura(models.Model):

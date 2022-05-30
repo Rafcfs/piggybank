@@ -1,5 +1,9 @@
 from django.shortcuts import render
+from rest_framework import generics
+from .serializers import CartaoSerializer
+from .models import CartaoCredito
 
 
-def index(request):
-    return render(request, 'cartao/index.html')
+class CartaoView(generics.CreateAPIView):
+    queryset = CartaoCredito.objects.all()
+    serializer_class = CartaoSerializer

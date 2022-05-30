@@ -3,11 +3,11 @@ from .models import CartaoCredito, Fatura
 
 
 class MostraCartao(admin.ModelAdmin):
-    list_display = ('id', 'numero', 'validade', 'cvv', 'bandeira', 'saldo','limite','conta')
-    list_display_links = ('id', 'numero', 'validade', 'cvv', 'bandeira', 'saldo','limite','conta')
-    list_filter = ('id', 'numero', 'validade', 'cvv', 'bandeira', 'saldo','limite','conta')
+    list_display = ('numero', 'validade', 'cvv', 'bandeira', 'saldo','limite','conta')
+    list_display_links = ('numero', 'validade', 'cvv', 'bandeira', 'saldo','limite','conta')
+    list_filter = ('numero', 'validade', 'cvv', 'bandeira', 'saldo','limite','conta')
     list_per_page = 15
-    search_fields = ('id', 'numero', 'validade', 'cvv', 'bandeira', 'saldo','limite','conta')
+    search_fields = ('numero', 'validade', 'cvv', 'bandeira', 'saldo','limite','conta')
 
 class MostraFatura(admin.ModelAdmin):
     list_display = ('id', 'valor', 'vencimento', 'jurus', 'status')
