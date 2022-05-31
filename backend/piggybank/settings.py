@@ -49,6 +49,8 @@ INSTALLED_APPS = [
     'cartao.apps.CartaoConfig',
     'accounts.apps.AccountsConfig',
     'rest_framework',
+    'corsheaders',
+
 
     # TODO remover debug tooldbar
     "debug_toolbar",
@@ -62,7 +64,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
     # TODO remover debug tooldbar
     "debug_toolbar.middleware.DebugToolbarMiddleware",
 
