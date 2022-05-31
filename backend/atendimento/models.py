@@ -20,7 +20,7 @@ class Atendimento(models.Model):
     assunto = models.CharField(max_length=150, default='')
     servico = models.CharField(max_length=2, choices=tipo_servico)
     descricao = models.CharField(max_length=255)
-    idfuncionario = models.ForeignKey(Funcionario, on_delete=models.PROTECT, blank=True)
+    idfuncionario = models.ForeignKey(Funcionario, on_delete=models.PROTECT, default=1)
     idcliente = models.ForeignKey(Cliente, on_delete=models.CASCADE)
 
     def __str__(self):
