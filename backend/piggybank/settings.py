@@ -56,6 +56,8 @@ INSTALLED_APPS = [
     "debug_toolbar",
 ]
 
+cors_origin_allow_all = True
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
