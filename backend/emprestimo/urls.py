@@ -1,6 +1,6 @@
 from django.urls import path
-from . import views
+from .views import EmprestimoView
 
 urlpatterns = [
-    path('', views.index, name='index'),
+    path('', EmprestimoView.as_view())
 ]

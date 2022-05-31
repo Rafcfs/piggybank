@@ -1,5 +1,8 @@
 from django.shortcuts import render
+from rest_framework import generics
+from .serializers import EmprestimoSerializer
+from .models import Emprestimo
 
-
-def index(request):
-    return render(request, 'emprestimo/index.html')
+class EmprestimoView(generics.CreateAPIView):
+    queryset = Emprestimo.objects.all()
+    serializer_class=EmprestimoSerializer

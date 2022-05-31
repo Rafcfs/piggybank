@@ -1,7 +1,7 @@
 from rest_framework import serializers
-from .models import Usuario
+from .models import Emprestimo
 
-class AccountSerializer(serializers.ModelSerializer):
+class EmprestimoSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Usuario
-        fields = ('id','email','senha','senha2')
+        model = Emprestimo
+        fields = ('id','valor','data_aplicacao','idagencia','idconta')
