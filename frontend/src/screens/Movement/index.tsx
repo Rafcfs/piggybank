@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import { Footer } from "../../components/Footer";
 import { Header } from "../../components/Header";
 import { NavBar } from "../../components/NavBar";
+import { RequestAccount } from "../../services/RequestLogin";
+import { RequestSuport } from "../../services/RequestSuport";
 import { ButtonMoviment, ButtonMovimentDest, Container, Division, DivMargin, DivRadioButton, InputMoviment, TitleMoviment, ViewDestinatario, ViewOrigem } from "./styles";
 
 export function Moviment() {
@@ -68,7 +70,7 @@ export function Moviment() {
 
                     <DivMargin>
                         <Link to="/menu"> <ButtonMovimentDest>Cancelar</ButtonMovimentDest></Link>
-                        <ButtonMovimentDest>Trasnferir</ButtonMovimentDest>
+                        <ButtonMovimentDest onClick={RequestAccount}>Trasnferir</ButtonMovimentDest>
                     </DivMargin>
 
                 </ViewDestinatario>

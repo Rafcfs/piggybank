@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Header } from "../../components/Header";
 import { NavBar } from "../../components/NavBar";
+import { RequestSuport } from "../../services/RequestSuport";
 
 const Support: React.FC = () => {
     return (
@@ -30,7 +31,7 @@ const Support: React.FC = () => {
                 </div>
                 <div>
                     <Link to="/menu"> <button>Voltar ao Menu</button></Link>
-                    <button>Enviar</button>
+                    <button onClick={() => RequestSuport}>Enviar</button>
                 </div>
             </form>
         </div>

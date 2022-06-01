@@ -1,6 +1,28 @@
 import React from "react";
+import { CreateNewPeoplePhysical } from "../../services/CreateNewPhysicalPeople";
 
 const RegisterPhysicalCustomer: React.FC = () => {
+
+    async function handleNewPhysicalPeople() {
+        const response = await CreateNewPeoplePhysical(
+            "rafa",
+            "proni",
+            "16981267873",
+            "15900005",
+            "Taquaritinga",
+            "SP",
+            "Rua 1",
+            "Centro",
+            "567",
+            "Casa",
+            "123456789",
+            "12332112332",
+            "M",
+            "30/06/2002",
+            "S"
+        )
+    }
+
     return (
         <>
             <div>
@@ -67,7 +89,7 @@ const RegisterPhysicalCustomer: React.FC = () => {
                 <label>Senha:</label>
                 <input type={"password"} />
             </div>
-            <button onClick={() => {}}>Registrar</button>
+            <button onClick={handleNewPhysicalPeople}>Registrar</button>
         </>
     )
 }
