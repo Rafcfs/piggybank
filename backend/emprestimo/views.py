@@ -5,4 +5,5 @@ from .models import Emprestimo
 
 class EmprestimoView(generics.CreateAPIView):
     queryset = Emprestimo.objects.all()
+    permission_classes = [permissions.AllowAny]
     serializer_class=EmprestimoSerializer
