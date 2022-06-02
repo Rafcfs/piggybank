@@ -31,7 +31,7 @@ const Cadastro: React.FC = () => {
                         <InputLogin type={"password"} {...register("password")} />
                     </div>
                     <DivButton style={{ display: "flex" }}>
-                        <button type="submit">Cadastrar</button>
+                       <Link to="/SelectRegister"> <button type="submit">Cadastrar</button></Link>
                     </DivButton>
                 </FormLogin>
             </form>
