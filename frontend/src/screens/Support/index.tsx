@@ -5,7 +5,8 @@ import { Header } from "../../components/Header";
 import { NavBar } from "../../components/NavBar";
 import { RequestSuport } from "../../services/RequestSuport";
 import { PrimaryImput } from "../../styles/primary";
-import { Selectinput } from "../RegisterPhysicalCustomer/styles";
+import { ButtonCadastrar, Selectinput } from "../RegisterPhysicalCustomer/styles";
+import { AlingForm, DivButton, FormSuport, ImportDescriptionProblem, StylesLabel } from "./styles";
 
 const Support: React.FC = () => {
 
@@ -20,8 +21,8 @@ const Support: React.FC = () => {
             <Header />
             <NavBar />
             <h1 style={{ textAlign: "center", marginBottom: 20, marginTop: 20 }}>Suporte</h1>
-            <div>
-                <form onSubmit={handleSubmit(handleSuportRequest)}>
+            <AlingForm>
+                <FormSuport onSubmit={handleSubmit(handleSuportRequest)}>
                     <div>
                         <label>Assunto:
                             <PrimaryImput type={"text"} {...register("assunto")} />
@@ -39,14 +40,14 @@ const Support: React.FC = () => {
                     </div>
                     <div>
                         <label>Descrição do problema:</label>
-                        <input {...register("descricao")} style={{ width: 200, height: 100, display: "flex", justifyContent: "flex-start" }} type={"text"} />
+                        <ImportDescriptionProblem type={"text"} />
                     </div>
-                    <div>
-                        <Link to="/menu"> <button>Voltar ao Menu</button></Link>
-                        <button type="submit">Enviar</button>
-                    </div>
-                </form>
-            </div>
+                    <DivButton>
+                        <Link to="/menu"> <ButtonCadastrar>Voltar ao Menu</ButtonCadastrar></Link>
+                        <ButtonCadastrar type="submit">Enviar</ButtonCadastrar>
+                    </DivButton>
+                </FormSuport>
+            </AlingForm>
         </div>
     )
 }

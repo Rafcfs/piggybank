@@ -44,11 +44,12 @@ export const DivButton = styled.div`
 
 export const ButtonCadastrar = styled.button`
   background-color: initial;
-  background-image: linear-gradient(#06CF8C 0, #06CF8C 100%);
+  background-image: linear-gradient(#4DC67D 0, #4DC67D 100%);
   border-radius: 5px;
   border-style: none;
   box-shadow: rgba(245, 244, 247, .25) 0 1px 1px inset;
   color: #000;
+  border: 1px solid black;
   cursor: pointer;
   display: inline-block;
   font-family: Inter, sans-serif;
@@ -64,5 +65,9 @@ export const ButtonCadastrar = styled.button`
   -webkit-user-select: none;
   touch-action: manipulation;
   vertical-align: bottom;
-  width: 190px;
+  width: 130px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `
