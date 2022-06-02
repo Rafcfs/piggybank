@@ -1,13 +1,27 @@
 from django.shortcuts import render, redirect
-from rest_framework import generics, mixins, permissions
+from rest_framework import generics, mixins, permissions, views
+from rest_framework.response import Response
 from .serializers import AccountSerializer
 from .models import Usuario
+from . import serializers
 
 
-class AccountView(generics.CreateAPIView):
+class AccountView(generics.ListCreateAPIView):
     queryset = Usuario.objects.all()
     permission_classes = [permissions.AllowAny]
     serializer_class = AccountSerializer
+
+class LoginView(views.APIView):
+    permission_classes = [permissions.AllowAny]
+
+    def post(self,request,format=None):
+        serializer = serializers.LoginSerializer(data=self.request.data,
+            context={'request':self.request})
+        serializer.is_valid(raise_exception=True)
+        user = serializer.validated_data['user']
+        login(request,user)
+        return Response(None,status=status.HTTP_202_ACCEPTED)
+
     
 
 '''
