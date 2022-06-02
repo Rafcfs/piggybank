@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Header } from "../../components/Header";
 import { NavBar } from "../../components/NavBar";
+import { GeneratorCardCredit } from "../../services/GeneratorCardCredit";
 import { PrimaryImput } from "../../styles/primary";
 import { CenterForm, Container, DivGridOne, DivGridTwo, FormCard, LabelInput } from "./styles";
 
@@ -14,6 +15,10 @@ export function MyCards() {
         operator: "Visa",
         balance: 200,
         limit: 1200
+    }
+
+    function GeneratorCard(){
+        GeneratorCardCredit()
     }
 
     const [card, setCard] = useState(Card)
@@ -42,6 +47,9 @@ export function MyCards() {
                         <LabelInput>Limite:</LabelInput>
                         <PrimaryImput type={"text"} disabled value={card.limit} />
                     </DivGridTwo>
+                    <button onClick={GeneratorCard}>
+                    Gerar Cartão
+                    </button>
                 </FormCard>
             </CenterForm>
         </Container>

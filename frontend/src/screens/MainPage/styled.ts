@@ -18,7 +18,10 @@ export const DivText = styled.div`
     padding: 10px;
 
     p{
+        padding: 30px;
         text-align: justify;
+        font-size: 30px;
+        font-weight: bold;
     }
 `
 export const DivImg = styled.div`

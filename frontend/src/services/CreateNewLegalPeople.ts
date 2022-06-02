@@ -17,21 +17,6 @@ type LegalPeople = {
 }
 
 export async function CreateNewLegalPeople(params: LegalPeople) {
-
-    console.log(params.nome)
-    console.log(params.sobrenome)
-    console.log(params.fone)
-    console.log(params.cep)
-    console.log(params.cidade)
-    console.log(params.estado)
-    console.log(params.logradouro)
-    console.log(params.bairro)
-    console.log(params.numero)
-    console.log(params.complemento)
-    console.log(params.cnpj)
-    console.log(params.inscricao_estadual)
-    console.log(params.nome_responsavel)
-
     const response =
         await api.post("/pessoa/juridica", {
             nome: params.nome,

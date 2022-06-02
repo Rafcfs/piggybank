@@ -18,8 +18,8 @@ const Login: React.FC = () => {
                         <PrimaryLabel>Senha:</PrimaryLabel>
                         <PrimaryImput type={"password"} />
                     </div>
-                    <PrimaryButton><Link to="/menu">Entrar</Link></PrimaryButton>
-                    <PrimaryButton><Link to="/SelectRegister">Criar Conta</Link></PrimaryButton>
+                    <Link to="/menu"><PrimaryButton>Entrar</PrimaryButton></Link>
+                    <Link to="/SelectRegister"><PrimaryButton>Criar Conta</PrimaryButton></Link>
                 </FormLogin>
             </AlignForm>
         </Container>
