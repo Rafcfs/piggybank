@@ -4,11 +4,15 @@ import { useForm } from "react-hook-form";
 import { Header } from "../../components/Header";
 import { AlignForm, ButtonCadastrar, Container, DivButton, Divdois, Divquatro, FormAling, Selectinput } from "./styles";
 import { PrimaryImput } from "../../styles/primary";
+import { CreateNewCont } from "../../services/CreateNewCount";
+import { Link } from "react-router-dom";
 
 const RegisterPhysicalCustomer: React.FC = () => {
 
     async function handleNewPhysicalPeople(data: any) {
         const response = await CreateNewPeoplePhysical(data)
+        const responsecont = await CreateNewCont(response.id)
+        console.log(responsecont)
     }
 
 
@@ -126,6 +130,7 @@ const RegisterPhysicalCustomer: React.FC = () => {
                                 </div>
                             </Divdois>
                             <DivButton>
+                               <Link to="SelectRegister"> <ButtonCadastrar type="submit">Voltar</ButtonCadastrar></Link>
                                 <ButtonCadastrar type="submit">Registrar</ButtonCadastrar>
                             </DivButton>
 

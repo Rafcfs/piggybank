@@ -1,6 +1,8 @@
 import React from "react";
 import { useForm } from "react-hook-form";
+import { Link } from "react-router-dom";
 import { Header } from "../../components/Header";
+import { CreateNewCont } from "../../services/CreateNewCount";
 import { CreateNewLegalPeople } from "../../services/CreateNewLegalPeople";
 import { PrimaryImput } from "../../styles/primary";
 import { AlignForm, ButtonCadastrar, DivButton, Divquatro, FormAling, Selectinput } from "../RegisterPhysicalCustomer/styles";
@@ -10,7 +12,10 @@ const RegisterLegalClient: React.FC = () => {
     async function handleNewLegalPeople(data: any) {
         const response = await CreateNewLegalPeople(data)
         console.log(response.id)
-    }   
+        const contresponse = await CreateNewCont(response.id)
+        console.log("foi", contresponse)
+    }
+
 
     const { register, handleSubmit } = useForm()
 
@@ -33,7 +38,7 @@ const RegisterLegalClient: React.FC = () => {
                                 </div>
                                 <div>
                                     <label>Telefone:</label>
-                                    <PrimaryImput type={"Text"} {...register("fone")}/>
+                                    <PrimaryImput type={"Text"} {...register("fone")} />
                                 </div>
                                 <div>
                                     <label>CNPJ:</label>
@@ -111,6 +116,7 @@ const RegisterLegalClient: React.FC = () => {
                                 </div>
                             </Divquatro>
                             <DivButton>
+                               <Link to="SelectRegister"> <ButtonCadastrar type="submit">Voltar</ButtonCadastrar></Link>
                                 <ButtonCadastrar type="submit">Registrar</ButtonCadastrar>
                             </DivButton>
                         </form>

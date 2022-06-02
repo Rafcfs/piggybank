@@ -43,18 +43,30 @@ export const BoxMenu = styled.div`
     display: grid;
     justify-content: center;
     align-items: center;
+    border-radius: 10px;
     width: 1200px;
     box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 `
 
-export const ButtonMovement = styled.button`
+export const ButtonMovement = styled.div`
     width: 180px;
     height: 180px;
     margin: 10px;
     background: #fff;
     border: 1px solid #666;
-    &:hover {
-        background-color: #555;
-        color: #fff;
+    display: grid;
+    justify-content: center;
+    padding: 20px;
+    align-items: center;
+    border-radius: 10px;
+    &:hover{
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
     }
+`
+
+export const TitleCard = styled.p`
+    color: #000;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
 `

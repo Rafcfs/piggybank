@@ -11,7 +11,7 @@ export const FormAling = styled.div`
 
 export const AlignForm = styled.div`
     display: flex;
-    width: 1200px;
+    width: 1300px;
     padding: 20px;
     background-color: #c5c5c5;
     border-radius: 10px;
@@ -38,17 +38,18 @@ export const Divdois = styled.div`
 
 export const DivButton = styled.div`
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-around;
     margin: 10px;
 `
 
 export const ButtonCadastrar = styled.button`
   background-color: initial;
-  background-image: linear-gradient(#06CF8C 0, #06CF8C 100%);
+  background-image: linear-gradient(#4DC67D 0, #4DC67D 100%);
   border-radius: 5px;
   border-style: none;
   box-shadow: rgba(245, 244, 247, .25) 0 1px 1px inset;
   color: #000;
+  border: 1px solid black;
   cursor: pointer;
   display: inline-block;
   font-family: Inter, sans-serif;
@@ -64,5 +65,9 @@ export const ButtonCadastrar = styled.button`
   -webkit-user-select: none;
   touch-action: manipulation;
   vertical-align: bottom;
-  width: 190px;
+  width: 130px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `
