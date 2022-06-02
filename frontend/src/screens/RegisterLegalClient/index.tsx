@@ -1,5 +1,6 @@
 import React from "react";
 import { useForm } from "react-hook-form";
+import { Link } from "react-router-dom";
 import { Header } from "../../components/Header";
 import { CreateNewCont } from "../../services/CreateNewCount";
 import { CreateNewLegalPeople } from "../../services/CreateNewLegalPeople";
@@ -15,7 +16,7 @@ const RegisterLegalClient: React.FC = () => {
         console.log("foi", contresponse)
     }
 
-    
+
     const { register, handleSubmit } = useForm()
 
     return (
@@ -115,6 +116,7 @@ const RegisterLegalClient: React.FC = () => {
                                 </div>
                             </Divquatro>
                             <DivButton>
+                               <Link to="SelectRegister"> <ButtonCadastrar type="submit">Voltar</ButtonCadastrar></Link>
                                 <ButtonCadastrar type="submit">Registrar</ButtonCadastrar>
                             </DivButton>
                         </form>

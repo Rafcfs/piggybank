@@ -11,7 +11,7 @@ export const FormAling = styled.div`
 
 export const AlignForm = styled.div`
     display: flex;
-    width: 1200px;
+    width: 1300px;
     padding: 20px;
     background-color: #c5c5c5;
     border-radius: 10px;
@@ -38,7 +38,7 @@ export const Divdois = styled.div`
 
 export const DivButton = styled.div`
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-around;
     margin: 10px;
 `
 
