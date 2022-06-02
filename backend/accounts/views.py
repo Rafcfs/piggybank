@@ -1,9 +1,9 @@
 from rest_framework import generics, permissions
 from .serializers import AccountSerializer
-from django.contrib.auth.models import User
+from .models import Usuario
 
 
 class AccountView(generics.ListCreateAPIView):
-    queryset = User.objects.all()
+    queryset = Usuario.objects.all()
     permission_classes = [permissions.AllowAny]
     serializer_class = AccountSerializer
