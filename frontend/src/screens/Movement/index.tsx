@@ -8,10 +8,6 @@ import { RequestSuport } from "../../services/RequestSuport";
 import { ButtonMoviment, ButtonMovimentDest, Container, Division, DivMargin, DivRadioButton, InputMoviment, TitleMoviment, ViewDestinatario, ViewOrigem } from "./styles";
 
 export function Moviment() {
-    async function HandleLogin(){
-        RequestSuport()
-    }
-
     return (
         <Container>
             <Header />
@@ -72,7 +68,7 @@ export function Moviment() {
 
                     <DivMargin>
                         <Link to="/menu"> <ButtonMovimentDest>Cancelar</ButtonMovimentDest></Link>
-                        <ButtonMovimentDest onClick={HandleLogin}>Trasnferir</ButtonMovimentDest>
+                        <ButtonMovimentDest onClick={() => {}}>Trasnferir</ButtonMovimentDest>
                     </DivMargin>
 
                 </ViewDestinatario>

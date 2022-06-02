@@ -9,6 +9,7 @@ export const AlignForm = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 50px;
 `
 
 export const FormLogin = styled.div`

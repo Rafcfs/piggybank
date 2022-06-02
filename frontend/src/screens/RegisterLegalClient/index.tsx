@@ -42,7 +42,7 @@ const RegisterLegalClient: React.FC = () => {
                             <Divquatro>
                                 <div>
                                     <label>Inscrição Estadual:</label>
-                                    <PrimaryImput type={"Text"} {...register("inscricao_estadual")} />
+                                    <PrimaryImput type={"Text"} {...register("incricao_estadual")} />
                                 </div>
                                 <div>
                                     <label>Nome do Responsável:</label>
