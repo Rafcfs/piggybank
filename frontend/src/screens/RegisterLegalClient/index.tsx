@@ -12,6 +12,7 @@ const RegisterLegalClient: React.FC = () => {
         console.log(response.id)
     }   
 
+    
     const { register, handleSubmit } = useForm()
 
     return (
