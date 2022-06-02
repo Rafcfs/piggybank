@@ -11,7 +11,7 @@ export function MainPage() {
             <Header />
             <div>
                 <OptionsUser>
-                    <Link to="/SelectRegister"><ButtonMain>
+                    <Link to="/Cadastro"><ButtonMain>
                         Cadastro
                     </ButtonMain></Link>
                     <Link to="/login">
