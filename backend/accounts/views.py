@@ -1,10 +1,11 @@
 from django.shortcuts import render, redirect
-from rest_framework import generics
+from rest_framework import generics, mixins, permissions
 from .serializers import AccountSerializer
 from .models import Usuario
 
 class AccountView(generics.CreateAPIView):
     queryset = Usuario.objects.all()
+    permission_classes = [permissions.AllowAny]
     serializer_class = AccountSerializer
     
 
