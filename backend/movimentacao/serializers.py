@@ -1,7 +1,7 @@
 from rest_framework import serializers
-from .models import Usuario
+from .models import Movimentacao
 
-class AccountSerializer(serializers.ModelSerializer):
+class MovimentacaoSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Usuario
-        fields = ('id','email','senha','senha2')
+        model = Movimentacao
+        fields = ('id','conta_origem','tipo','conta_receber','valor','data_execucao','codigo_boleto')
