@@ -9,6 +9,7 @@ const RegisterLegalClient: React.FC = () => {
 
     async function handleNewLegalPeople(data: any) {
         const response = await CreateNewLegalPeople(data)
+        console.log(response.id)
     }   
 
     const { register, handleSubmit } = useForm()
@@ -42,7 +43,7 @@ const RegisterLegalClient: React.FC = () => {
                             <Divquatro>
                                 <div>
                                     <label>Inscrição Estadual:</label>
-                                    <PrimaryImput type={"Text"} {...register("incricao_estadual")} />
+                                    <PrimaryImput type={"Text"} {...register("inscricao_estadual")} />
                                 </div>
                                 <div>
                                     <label>Nome do Responsável:</label>

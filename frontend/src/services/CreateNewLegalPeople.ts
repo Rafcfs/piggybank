@@ -17,24 +17,29 @@ type LegalPeople = {
 }
 
 export async function CreateNewLegalPeople(params: LegalPeople) {
-    const response =
-        await api.post("/pessoa/juridica", {
-            nome: params.nome,
-            sobrenome: params.sobrenome,
-            fone: params.fone,
-            cep: params.cep,
-            localidade: params.cidade,
-            uf: params.estado,
-            logradouro: params.logradouro,
-            bairro: params.bairro,
-            numero: params.numero,
-            complemento: params.complemento,
-            cnpj: params.cnpj,
-            inscricao_estadual: params.inscricao_estadual,
-            nome_responsavel: params.nome_responsavel
-        }).then(function (response) {
-            console.log(response)
-        }).catch(function (error) {
-            console.log(error.status)
-        })
+    try {
+        const response =
+            await api.post("/pessoa/juridica", {
+                nome: params.nome,
+                sobrenome: params.sobrenome,
+                fone: params.fone,
+                cep: params.cep,
+                localidade: params.cidade,
+                uf: params.estado,
+                logradouro: params.logradouro,
+                bairro: params.bairro,
+                numero: params.numero,
+                complemento: params.complemento,
+                cnpj: params.cnpj,
+                inscricao_estadual: params.inscricao_estadual,
+                nome_responsavel: params.nome_responsavel
+            })
+        return {
+            id: response.data.id
+        }
+    } catch (error) {
+        return {
+            status: error
+        }
+    }
 }
