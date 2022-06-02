@@ -18,25 +18,30 @@ type PhysicalPeople = {
 }
 
 export async function CreateNewPeoplePhysical(params: PhysicalPeople) {
-    const response =
-        await api.post("/pessoa/fisica", {
-            nome: params.nome,
-            sobrenome: params.sobrenome,
-            fone: params.fone,
-            cep: params.cep,
-            localidade: params.cidade,
-            uf: params.estado,
-            logradouro: params.logradouro,
-            bairro: params.bairro,
-            numero: params.numero,
-            complemento: params.complemento,
-            RG: params.RG,
-            cpf: params.cpf,
-            sexo: params.sexo,
-            estado_civil: params.estado_civil
-        }).then(function (response) {
-            console.log(response)
-        }).catch(function (error) {
-            console.log(error.status)
-        })
+    try {
+        const response =
+            await api.post("/pessoa/fisica", {
+                nome: params.nome,
+                sobrenome: params.sobrenome,
+                fone: params.fone,
+                cep: params.cep,
+                localidade: params.cidade,
+                uf: params.estado,
+                logradouro: params.logradouro,
+                bairro: params.bairro,
+                numero: params.numero,
+                complemento: params.complemento,
+                RG: params.RG,
+                cpf: params.cpf,
+                sexo: params.sexo,
+                estado_civil: params.estado_civil
+            })
+        return {
+            id: response.data.id
+        }
+    } catch (error) {
+        return {
+            status: error
+        }
+    }
 }
