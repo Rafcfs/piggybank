@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from rest_framework import generics
+from rest_framework import generics, permissions
 from .serializers import FisicaSerializer,JuridicaSerializer
 from .models import Pessoa_Fisica,Pessoa_Juridica
 
