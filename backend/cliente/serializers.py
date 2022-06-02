@@ -7,7 +7,7 @@ class FisicaSerializer(serializers.ModelSerializer):
         fields = ('id','nome','sobrenome','fone',
             'cep','localidade','uf','logradouro',
             'bairro','numero','complemento','RG',
-            'cpf','sexo','nascimento','estado_civil'
+            'cpf','sexo','estado_civil'
         )
 
 class JuridicaSerializer(serializers.ModelSerializer):
