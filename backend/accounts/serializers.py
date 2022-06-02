@@ -1,5 +1,4 @@
 import email
-from click import style
 from rest_framework import serializers
 from django.contrib.auth import authenticate
 from .models import Usuario

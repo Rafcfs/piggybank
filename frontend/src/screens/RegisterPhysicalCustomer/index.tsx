@@ -4,11 +4,14 @@ import { useForm } from "react-hook-form";
 import { Header } from "../../components/Header";
 import { AlignForm, ButtonCadastrar, Container, DivButton, Divdois, Divquatro, FormAling, Selectinput } from "./styles";
 import { PrimaryImput } from "../../styles/primary";
+import { CreateNewCont } from "../../services/CreateNewCount";
 
 const RegisterPhysicalCustomer: React.FC = () => {
 
     async function handleNewPhysicalPeople(data: any) {
         const response = await CreateNewPeoplePhysical(data)
+        const responsecont = await CreateNewCont(response.id)
+        console.log(responsecont)
     }
 
 
