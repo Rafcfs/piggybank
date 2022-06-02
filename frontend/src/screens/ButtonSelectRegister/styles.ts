@@ -14,5 +14,15 @@ export const DivButtonAndText = styled.div`
 
 export const AlingButton = styled.div`
     display: flex;
-    justify-content: center;
+    width: 1200px;
+    justify-content: space-around;
+    margin: 10px;
+`
+
+
+export const AlingButtonBack = styled.div`
+    display: flex;
+    width: 1200px;
+    justify-content: space-around;
+    margin: 10px;
 `

@@ -1,74 +1,42 @@
 import api from "./api";
 
 type PhysicalPeople = {
-    name: string;
-    lastName: string
-    phone: string;
+    nome: string;
+    sobrenome: string
+    fone: string;
     cep: string;
-    locality: string;
-    uf: string;
-    publicPlace: string;
-    district: string;
-    number: string;
-    complement: string;
+    cidade: string;
+    estado: string;
+    logradouro: string;
+    bairro: string;
+    numero: string;
+    complemento: string;
     RG: string;
-    CPF: string;
-    sex: string;
-    birth: string;
-    maritalStatus: string;
+    cpf: string;
+    sexo: string;
+    estado_civil: string;
 }
 
-export async function CreateNewPeoplePhysical(name: string, lastName: string, phone: string, cep: string, locality: string, uf: string, publicPlace: string, district: string, number: string, complement: string, RG: string, CPF: string, sex: string, birth: string, maritalStatus: string){
-    console.log(name)
-    console.log(lastName)
-    console.log(phone)
-    console.log(cep)
-    const response = 
-        await api.post("pessoa/fisica", {
-            nome: name,
-            sobrenome: lastName,
-            fone: phone,
-            cep: cep,
-            localidade: locality,
-            uf: uf,
-            logradouro: publicPlace,
-            bairro: district,
-            numero: number,
-            complemento: complement,
-            RG: RG,
-            cpf: CPF,
-            sexo: sex,
-            nascimento: birth,
-            estado_civil: maritalStatus
-        }).then(function(response) {
+export async function CreateNewPeoplePhysical(params: PhysicalPeople) {
+    const response =
+        await api.post("/pessoa/fisica", {
+            nome: params.nome,
+            sobrenome: params.sobrenome,
+            fone: params.fone,
+            cep: params.cep,
+            localidade: params.cidade,
+            uf: params.estado,
+            logradouro: params.logradouro,
+            bairro: params.bairro,
+            numero: params.numero,
+            complemento: params.complemento,
+            RG: params.RG,
+            cpf: params.cpf,
+            sexo: params.sexo,
+            estado_civil: params.estado_civil
+        }).then(function (response) {
             console.log(response)
         }).catch(function (error) {
             console.log(error.status)
         })
 }
-
-// export async function CreateNewPeoplePhysical(name: string, lastName: string, phone: string, cep: string, locality: string, uf: string, publicPlace: string, district: string, number: string, complement: string, RG: string, CPF: string, sex: string, birth: string, maritalStatus: string){
-//     console.log(name)
-//     console.log(lastName)
-//     console.log(phone)
-//     console.log(cep)
-//     const response = 
-//         await api.post("pessoafisica/", {
-//             name,
-//             lastName,
-//             phone,
-//             cep,
-//             locality,
-//             uf,
-//             publicPlace,
-//             district,
-//             number,
-//             complement,
-//             RG,
-//             CPF,
-//             sex,
-//             birth,
-//             maritalStatus
-//         })
-//         return response.status
-// }

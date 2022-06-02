@@ -54,7 +54,6 @@ class Pessoa_Fisica(Cliente):
         ('N', 'Não Binário')
     )
     sexo = models.CharField(max_length=1, choices=SEXOS)
-    nascimento = models.DateField()
     ESTADOS_CIVIS = (
         ('S', 'Solteiro'),
         ('C', 'Casado'),

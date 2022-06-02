@@ -26,6 +26,7 @@ urlpatterns = [
     path('emprestimo/', include('emprestimo.urls')),
     path('suporte/', include('atendimento.urls')),
     path('cartao/', include('cartao.urls')),
+    path('movimentacao/', include('movimentacao.urls')),
     path('csrf/', views.csrf),
     path('ping/', views.ping),
 

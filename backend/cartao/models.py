@@ -14,7 +14,7 @@ class CartaoCredito(models.Model):
     }
 
     numero=models.BigAutoField(auto_created=True,unique=True,primary_key=True)
-    validade = models.DateField()
+    validade = models.CharField(max_length=11)
     cvv = models.CharField(max_length=3)
     bandeira = models.CharField(max_length=2, choices=operadoras)
     saldo = models.DecimalField(max_digits=9, decimal_places=2, blank=True)
