@@ -63,7 +63,7 @@ class Pessoa_Fisica(Cliente):
     estado_civil = models.CharField(max_length=1, choices=ESTADOS_CIVIS)
 
     def __str__(self):
-        return self.cpf
+        return self.nome
 
     class Meta:
         verbose_name = 'Pessoa Física'
