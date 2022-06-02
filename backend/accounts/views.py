@@ -2,6 +2,14 @@ from django.shortcuts import render, redirect
 from rest_framework import generics, mixins, permissions
 from .serializers import AccountSerializer
 from .models import Usuario
+from django.http import JsonResponse
+from django.middleware.csrf import get_token
+
+def csrf(request):
+    return JsonResponse({'csrfToken':get_token(request)})
+
+def ping(request):
+    return JsonResponse({'result': 'OK'})
 
 class AccountView(generics.CreateAPIView):
     queryset = Usuario.objects.all()
