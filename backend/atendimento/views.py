@@ -5,4 +5,5 @@ from .models import Atendimento
 
 class AtendimentoView(generics.CreateAPIView):
     queryset = Atendimento.objects.all()
+    permission_classes = [permissions.AllowAny]
     serializer_class = AtendimentoSerializer
