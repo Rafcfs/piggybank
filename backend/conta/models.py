@@ -10,9 +10,9 @@ class Conta(models.Model):
         ('CS', 'Conta Salario'),
     )
 
-    numero = models.CharField(max_length=255)
-    saldo = models.CharField(max_length=255)
-    tipo = models.CharField(max_length=2, choices=tipo_conta)
+    numero = models.AutoField(unique=True, primary_key=True)
+    saldo = models.DecimalField(max_digits=9, decimal_places=2, default=100.00)
+    tipo = models.CharField(max_length=2, choices=tipo_conta, default='CC')
     idagencia = models.ForeignKey(Agencia, on_delete=models.PROTECT)
     idcliente = models.ForeignKey(Cliente, on_delete=models.CASCADE)
 
