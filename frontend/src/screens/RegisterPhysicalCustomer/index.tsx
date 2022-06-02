@@ -5,6 +5,7 @@ import { Header } from "../../components/Header";
 import { AlignForm, ButtonCadastrar, Container, DivButton, Divdois, Divquatro, FormAling, Selectinput } from "./styles";
 import { PrimaryImput } from "../../styles/primary";
 import { CreateNewCont } from "../../services/CreateNewCount";
+import { Link } from "react-router-dom";
 
 const RegisterPhysicalCustomer: React.FC = () => {
 
@@ -129,6 +130,7 @@ const RegisterPhysicalCustomer: React.FC = () => {
                                 </div>
                             </Divdois>
                             <DivButton>
+                               <Link to="SelectRegister"> <ButtonCadastrar type="submit">Voltar</ButtonCadastrar></Link>
                                 <ButtonCadastrar type="submit">Registrar</ButtonCadastrar>
                             </DivButton>
 

@@ -1,5 +1,6 @@
 import { Navigate, Route, Routes } from "react-router-dom"
 import { ButtonSelectRegister } from "./screens/ButtonSelectRegister"
+import Cadastro from "./screens/Cadastro"
 import Login from "./screens/Login"
 import { MainPage } from "./screens/MainPage"
 import Menu from "./screens/Menu"
@@ -20,6 +21,7 @@ export const AppRoutes = () => {
             <Route path="/perfil" element={<Profile />} />
             <Route path="/cards" element={<MyCards />} />
             <Route path="/movimentacao" element={<Moviment />} />
+            <Route path="/cadastro" element={<Cadastro />} />
             <Route path="/registerLegal" element={<RegisterLegalClient />} />
             <Route path="/registerPhysical" element={<RegisterPhysicalCustomer />} />
             <Route path="/SelectRegister" element={<ButtonSelectRegister />} />
