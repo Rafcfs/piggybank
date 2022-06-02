@@ -1,6 +1,6 @@
 import { Navigate, Route, Routes } from "react-router-dom"
 import { ButtonSelectRegister } from "./screens/ButtonSelectRegister"
-import Cadastro from "./screens/Cadastro"
+import Cadastro from "./screens/NewCadastro"
 import Login from "./screens/Login"
 import { MainPage } from "./screens/MainPage"
 import Menu from "./screens/Menu"
